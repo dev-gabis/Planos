@@ -4,35 +4,57 @@
 html, body{ overflow-x: hidden; }
 .body {
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
   font-size: 1rem;
   line-height: 1.5;
   color: #212529;
   background-color: #E5E5E5;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* fontes */
+
+
+@font-face {
+  font-family:"SF Pro Display Bold";
+  src:url("./fonts/SF-Pro-Display-Bold.OTF") format("opentype");
+}
+@font-face{
+  font-family:"SF Pro Display Medium";
+  src:url("./fonts/SF-Pro-Display-Medium.OTF") format("opentype");
+}
+@font-face{
+  font-family:"SF Pro Display";
+  src:url("./fonts/SF-Pro-Display-Regular.OTF") format("opentype");
+}
+h1,h2,h3,a,.btn{
+  font-family:'SF Pro Display Bold' Arial, Helvetica, sans-serif;
+}
+p,input,select{
+  font-family:'SF Pro Display', Arial, Helvetica, sans-serif;
+}
+h2{
+  font-size: 2.3rem;
+}
+h6{
+  font-size: 1.2rem;
+}
+h1 {
+  font-size: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 80px;
 }
 
 
 /* HEADER */
 
 
-.title {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 100px;
-}
 .subtitle {
-  color: rgb(0, 0, 0);
   padding-bottom: 50px;
   font-size: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
 }
-
 
 /* CARD */
 
@@ -58,17 +80,25 @@ html, body{ overflow-x: hidden; }
 }
 .Seu-plano{
   color: #8B90A0;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card-body {
+  padding: 1rem 0;
 }
 .description {
   color: #5e5e5e;
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 
 /* LISTA */
 
+
+ul{
+  min-height: 440px;
+}
 
 ul li{
   list-style-image: url('./assets/main/puple.png');
@@ -86,7 +116,7 @@ ul li{
   list-style-image: url('./assets/main/purple.png');
   padding-top: 20px;
 }
-.tootipv{
+.tootip{
   width: 15px;
   opacity : 0.5; 
 }
@@ -105,18 +135,18 @@ button {
   border-color: #7553E2;
   border-radius: 13px !important;
   padding: 15px 50px;
-  background-color: #ffffff !important;
-  color: #7553E2 !important;
+  background-color: #ffffff;
+  color: #7553E2 ;
 }
 .button :hover{
-  background-color: #7553E2 !important;
-  color: #fcfcfc !important;
+  background-color: #7553E2;
+  color: #fcfcfc;
   border-radius: 13px;
   transition: 0.1s;
 }
 .button-top button{
-  background-color: #7553E2 !important;
-  color: #ffffff !important;
+  background-color: #7553E2;
+  color: #ffffff;
   border-radius: 100px !important;
   align-items: center;
   border: none;
@@ -134,15 +164,18 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 50px;
 }
 
 /* RESPONSIVO */
 
 @media screen and (max-width: 1200px) {
 
-  .title {
+  h1 {
+    font-size: 2rem;
     color: rgb(0, 0, 0);
     text-align: center;
+    padding-top: 60px;
   }
   .subtitle{
     text-align: center;
@@ -152,9 +185,6 @@ button {
     width: 330px !important;
     margin-bottom: 50px;
   }
-
-
-
 
 }
 
